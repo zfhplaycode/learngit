@@ -15,3 +15,4 @@ git status 列举工作区和缓存区中文件的状态
 git diff 查看工作区中的文件做了哪些修改
 git log 查看详细历史记录
 git reset --hard HEAD^(HEAD~1) 返回上一个版本，其他类推
+git diff HEAD -- filename.txt 查看工作区和版本库中最新版本的区别
