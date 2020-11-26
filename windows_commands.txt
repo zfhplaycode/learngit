@@ -6,6 +6,8 @@ pwd 显示当前目录
 dir 查看当前目录下的文件
 
 git 命令
+git config --global user.name "xxx" 设置名字
+git config --global user.email"xxx" 设置邮箱
 git init 在当前工作区初始化一个空库
 git add filename1.xxx filename2.xxx 将工作区文件添加到缓存区
 git commit -m(message) "description information" 将缓存区文件添加到库中，并清空缓存区
