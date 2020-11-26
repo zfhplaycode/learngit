@@ -16,4 +16,4 @@ git diff 查看工作区中的文件做了哪些修改
 git log 查看详细历史记录
 git reset --hard HEAD^(HEAD~1) 返回上一个版本，其他类推
 git diff HEAD -- filename.txt 查看工作区和版本库中最新版本的区别
-
+git checkout -- filename.xx 回到最近一次git commit或git add的状态
