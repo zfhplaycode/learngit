@@ -9,3 +9,5 @@ git 命令
 git init 在当前工作区初始化一个空库
 git add filename1.xxx filename2.xxx 将工作区文件添加到缓存区
 git commit -m(message) "description information" 将缓存区文件添加到库中，并清空缓存区
+git status 列举工作区和缓存区中文件的状态
+git diff 查看工作区中的文件做了哪些修改
