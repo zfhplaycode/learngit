@@ -4,6 +4,7 @@ E: 进入E盘的根目录
 cd <文件夹名>进入当下目录的指定文件夹
 pwd 显示当前目录
 dir 查看当前目录下的文件
+rm <filename.xxx> 删除当下目录指定文件
 
 git 命令
 git config --global user.name "xxx" 设置名字
@@ -16,4 +17,7 @@ git diff 查看工作区中的文件做了哪些修改
 git log 查看详细历史记录
 git reset --hard HEAD^(HEAD~1) 返回上一个版本，其他类推
 git diff HEAD -- filename.txt 查看工作区和版本库中最新版本的区别
-git checkout -- filename.xx 回到最近一次git commit或git add的状态
+git rm <filename.xxx> 从版本库中删除指定文件【执行该命令后依然需要提交，
+先手动删除文件，然后使用git rm <file> 和 git add <file>效果是一样的】
+git checkout -- filename.xx 在当前目录下删除了指定文件，但是版本库中依然存在，则
+使用该命令从版本库中恢复指定文件至当下目录
