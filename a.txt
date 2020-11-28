@@ -1,1 +1,1 @@
-尝试进行禁用fast forward模式的merge
+在ff模式下的merge
