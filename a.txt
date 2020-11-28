@@ -1,7 +1,1 @@
-这是在dev分支下做的修改
-第二次修改
-<<<<<<< HEAD
-这是在master下的修改，为了演示merge冲突
------
-在dev分支下做的修改，为了演示冲突
->>>>>>> dev
+尝试进行禁用fast forward模式的merge
