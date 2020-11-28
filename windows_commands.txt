@@ -31,3 +31,4 @@ git branch -b dev【等价于git switch -c dev】 创建并切换分支
 git branch 查看当前分支
 git merge dev 将dev分支合并至当前分止
 git branch -d dev 删除dev分支
+git merge --no--ff -m "description information" 【在使用fast forward模式下，删除分支后，会丢失分支信息，而这种强制禁用fast forward的方式，git就会在merge时生成一个新的commit, 这样从分支历史上就可以看到分支信息】
