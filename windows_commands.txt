@@ -39,7 +39,7 @@ Bug分支
 	git stash drop 删除stash中的内容
 	git stash pop 恢复工作现场并删除stash中的内容
 	git stash apply stash@{0} 恢复指定的stash中的内容
-	git cherry-pick id-number  复制一个特定的提交到当前分支
+	git cherry-pick id-number  复制一个特定的提交【包括提交的描述信息】到当前分支
 Feature分支
 [添加一个新功能，新建一个feature分支，在上面开发，完成之后合并最后删除feature分支]
 多人协作
