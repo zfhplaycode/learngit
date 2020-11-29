@@ -32,37 +32,3 @@ git branch 查看当前分支
 git merge dev 将dev分支合并至当前分止
 git branch -d dev 删除dev分支
 git merge --no--ff -m "description information" 【在使用fast forward模式下，删除分支后，会丢失分支信息，而这种强制禁用fast forward的方式，git就会在merge时生成一个新的commit, 这样从分支历史上就可以看到分支信息】
-Bug分支
-	git stach 保存当前工作环境，同时把工作区清空
-	git stash list 查看已保存的工作现场
-	git stash apply 恢复工作现场，但不会删除stash中的内容
-	git stash drop 删除stash中的内容
-	git stash pop 恢复工作现场并删除stash中的内容
-	git stash apply stash@{0} 恢复指定的stash中的内容
-	git cherry-pick id-number  复制一个特定的提交到当前分支
-Feature分支
-[添加一个新功能，新建一个feature分支，在上面开发，完成之后合并最后删除feature分支]
-多人协作
-流程：
-	1、试图用git push origin <branch-name>推送自己的修改
-	2、如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并
-	3、如果合并有冲突则解决冲突，并在本地提交
-	4、没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功。
-如果git pull提示no tracking information, 则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>.
-git remote -v 查看远程库信息
-标签管理
-发布一个版本时，我们首先通常在版本库中打一个标签(tag)，这样，就唯一确定了打标签时刻的版本。
-	git tag [version-name] 默认标签打在最新提交的commit上
-	git tag [version-name] [commit-id] 对指定提交打标签
-	git tag 查看标签
-	git show <tagname> 查看指定标签信息和说明信息
-	git tag -a <version-name> -m <description> <commit-id> 创建带有说明的标签
-标签总是和某个commit挂钩，如果这个commit即出现在master分支，又出现在dev分支，那么这两个分支都可以看到这个标签信息。
-	git tag -d <tagname> 删除指定标签【创建的标签都只存储在本地不会自动推送到远程】
-	git push origin <tagname> 推送某个标签到远程
-	git push origin --tags 一次性推送全部尚未推送到远程的本地标签
-	git push origin :refs/tags/<tagname>删除一个远程标签
-配置别名
-	git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" 在该配置命令后输入git lg可以得到非常详细且明了的提交记录
-	cat .git/config 查看每个仓库的配置文件，别名就在[alias]后面，要删除别名，直接把对应的行删掉即可
-	cat .gitconfig 当前用户的git配置文件
